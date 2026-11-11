@@ -169,6 +169,21 @@ def main():
     if exc:
         items = [x for x in items if not any(k.lower() in x["name"].lower() for k in exc)]
 
+    # 白名单：只保留 CCTV-1~17 和 卫视，其他全砍
+    def is_allowed(name):
+        n = name.upper().strip()
+        # 所有含"卫视"的频道都留
+        if "卫视" in name:
+            return True
+        # CCTV-1 到 CCTV-17（兼容 CCTV5 / CCTV 5 / CCTV-5，排除 4K/8K 衍生频道）
+        m = re.match(r'^CCTV[\s\-]*(\d+)(?!\w)', n)
+        if m and 1 <= int(m.group(1)) <= 17:
+            return True
+        return False
+    before = len(items)
+    items = [x for x in items if is_allowed(x["name"])]
+    log("白名单过滤：%d → %d 条（只留 CCTV-1~17 + 卫视）" % (before, len(items)))
+
     # 去重 URL
     seen, dedup = set(), []
     for x in items:
