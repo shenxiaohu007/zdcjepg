@@ -14,6 +14,6 @@
   "fetch_timeout": 25,
   "rounds": 2,
   "output_dir": "output",
-  "include_keywords": ["CCTV", "卫视", "CGTN"],
+  "include_keywords": ["CCTV", "卫视"],
   "exclude_keywords": ["[Geo-blocked]", "Adult", "18+"]
 }
