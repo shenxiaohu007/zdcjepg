@@ -7,7 +7,7 @@
     "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u"
   ],
   "max_candidates": 1600,
-  "priority_keywords": ["CCTV", "卫视", "安徽", "凤凰"],
+  "priority_keywords": ["CCTV", "CGTN,"卫视", "安徽", "凤凰"],
   "max_per_channel": 3,
   "concurrency": 40,
   "timeout": 8,
