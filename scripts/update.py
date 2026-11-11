@@ -11,6 +11,7 @@
 import argparse
 import json
 import os
+import re
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -82,6 +83,8 @@ def export(passed, cfg, outdir):
     seen, uniq = set(), []
     for x in passed:
         n = clean_name(x["name"])
+        # 规范化频道名：CCTV5 / CCTV 5 → CCTV-5，统一横杠写法
+        n = re.sub(r'^CCTV[\s\-]*(\d+)', lambda m: 'CCTV-%s' % m.group(1), n, flags=re.I)
         if (n, x["url"]) in seen:
             continue
         seen.add((n, x["url"]))
@@ -93,13 +96,20 @@ def export(passed, cfg, outdir):
 
     max_per = int(cfg.get("max_per_channel", 3))
 
+    # 排序：CCTV 按数字 1→17，其他频道按名字
+    def sort_key(name):
+        m = re.match(r'^CCTV-(\d+)(.*)', name, re.I)
+        if m:
+            return (0, int(m.group(1)), m.group(2), name)
+        return (1, 0, '', name)
+
     # TVBox / 骆驼后台通用 TXT
     lines = []
     for c in ORDER:
         if c not in bycat:
             continue
         lines.append("%s,#genre#" % c)
-        for n in sorted(bycat[c].keys(), key=lambda s: (len(s), s)):
+        for n in sorted(bycat[c].keys(), key=sort_key):
             for u in bycat[c][n][:max_per]:
                 lines.append("%s,%s" % (n, u))
         lines.append("")
@@ -110,7 +120,7 @@ def export(passed, cfg, outdir):
     # M3U
     m3u = ["#EXTM3U"]
     for c in ORDER:
-        for n, urls in sorted(bycat.get(c, {}).items()):
+        for n, urls in sorted(bycat.get(c, {}).items(), key=lambda x: sort_key(x[0])):
             for u in urls[:max_per]:
                 m3u.append('#EXTINF:-1 group-title="%s",%s' % (c, n))
                 m3u.append(u)
