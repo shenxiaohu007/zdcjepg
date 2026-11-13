@@ -23,5 +23,5 @@
   "ad_gap": 3,
   "ad_timeout": 6,
   "ad_workers": 16,
-  "ad_threshold": 3
+  "ad_threshold": 1
 }
