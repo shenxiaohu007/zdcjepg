@@ -1,0 +1,33 @@
+# 本次运行剔除的广告入口（仅记录，不是黑名单，下次运行重新检测）
+# 频道,URL,采样的5次中落广告池次数
+CCTV-11 (720p),http://74.91.26.218:82/live/cctv11hd.m3u8,1
+CCTV-12 (720p),http://74.91.26.218:82/live/cctv12hd.m3u8,2
+CCTV-13 (720p),http://74.91.26.218:82/live/cctv13hd.m3u8,1
+CCTV-15 (720p),http://74.91.26.218:82/live/cctv15hd.m3u8,1
+CCTV-1,http://204.12.221.218:8181/3m1080p/cctv1.m3u8,1
+CCTV-5,http://38.75.136.137:98/gslb/dsdqpub/cctv5p.m3u8?auth=testpub,1
+CCTV-6,http://74.91.26.218:82/live/cctv6hd.m3u8,1
+CCTV-6,http://198.204.228.26/live/cctv6hd.m3u8,1
+CCTV-8,http://69.30.245.50/live/cctv8.m3u8,1
+CCTV-12,http://38.75.136.137:98/gslb/dsdqpub/cctv12hd.m3u8?auth=testpub,1
+CCTV-15,http://38.75.136.137:98/gslb/dsdqbv/cctv15hd.m3u8?auth=test20251009,1
+CCTV-15,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv15hd,1
+CCTV-16,http://38.75.136.137:98/gslb/dsdqbv/cctv16hd.m3u8?auth=test20251009,1
+广东卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=gdwshd,1
+湖北卫视,http://107.150.60.122/live/hbwshd.m3u8,1
+湖北卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hbwshd,1
+黑龙江卫视,http://38.75.136.137:98/gslb/dsdqpub/hljwshd.m3u8?auth=testpub,1
+安徽卫视,http://107.150.60.122/live/ahwshd.m3u8,1
+东南卫视,http://38.75.136.137:98/gslb/dsdqpub/dnwshd.m3u8?auth=testpub,1
+甘肃卫视,http://38.75.136.137:98/gslb/dsdqpub/gswshd.m3u8?auth=testpub,1
+甘肃卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=gswshd,1
+贵州卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=gzwshd,1
+河南卫视,http://38.75.136.137:98/gslb/dsdqpub/hawshd.m3u8?auth=testpub,1
+江西卫视,http://38.75.136.137:98/gslb/dsdqpub/jxwshd.m3u8?auth=testpub,1
+辽宁卫视,http://198.204.228.26/live/lnwshd.m3u8,3
+辽宁卫视,http://204.12.221.218:8181/3m1080p/lnws.m3u8,1
+内蒙古卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=nmgws,1
+山东卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=sdwshd,2
+三沙卫视,http://38.75.136.137:98/gslb/dsdqpub/ssws.m3u8?auth=testpub,1
+大湾区卫视,http://198.204.228.26/live/nfws.m3u8,1
+大湾区卫视,http://107.150.60.122/live/nfws.m3u8,1
