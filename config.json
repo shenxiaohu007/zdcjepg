@@ -18,5 +18,10 @@
   "rounds": 2,
   "output_dir": "output",
   "include_keywords": [],
-  "exclude_keywords": ["[Geo-blocked]", "Adult", "18+", "cmvideo.cn", "wasulive", "itv.cmvideo"]
+  "exclude_keywords": ["[Geo-blocked]", "Adult", "18+", "cmvideo.cn", "wasulive", "itv.cmvideo"],
+  "ad_samples": 5,
+  "ad_gap": 3,
+  "ad_timeout": 6,
+  "ad_workers": 16,
+  "ad_threshold": 3
 }
