@@ -13,6 +13,7 @@ import json
 import os
 import re
 import sys
+import tempfile
 import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
@@ -23,6 +24,9 @@ from checker import check, clean_name, category, parse_m3u_text, fetch  # noqa: 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE = os.path.join(ROOT, ".cache")
 ORDER = ["央视", "卫视", "港澳台", "地方台", "特色"]
+
+# 广告池落点特征：这套源站 302 后会落到 /applive/{mkt|yss|102}.m3u8 时是购物广告
+AD_POOL = re.compile(r'/applive/(mkt|yss|102)\.m3u8', re.I)
 
 
 def log(msg):
@@ -77,12 +81,108 @@ def run_checks(items, cfg, rounds=2):
     return passed
 
 
+def _norm_name(name):
+    """频道名规范化，与 export() 保持一致：CCTV5 / CCTV 5 -> CCTV-5"""
+    n = clean_name(name)
+    return re.sub(r'^CCTV[\s\-]*(\d+)', lambda m: 'CCTV-%s' % m.group(1), n, flags=re.I)
+
+
+def probe_ad_hits(url, samples=5, gap=3, timeout=6):
+    """对同一个入口采样 samples 次，返回 (落广告池次数, 成功请求次数)
+
+    这套源站每次请求会随机/轮换落到不同池子：
+      真台池 cctv3md / gzws / hews ...      -> 正常
+      广告池 mkt / yss / 102                -> 购物广告
+    所以单次检测会漏判，必须多次采样数比例。
+    """
+    hits = 0
+    ok = 0
+    tmp = os.path.join(tempfile.gettempdir(), "ad_probe.m3u8")
+    for i in range(samples):
+        try:
+            code, _, _, eff = fetch(url, tmp, timeout)
+        except Exception:
+            code, eff = 0, ""
+        if code == 200 and eff:
+            ok += 1
+            if AD_POOL.search(eff):
+                hits += 1
+        if i < samples - 1:
+            time.sleep(gap)
+    return hits, ok
+
+
+def filter_ads(passed, cfg, outdir):
+    """实时检出广告入口并剔除；同频道已有干净源时优先放弃偶发跳转的源"""
+    if not passed:
+        return passed
+    samples = int(cfg.get("ad_samples", 5))
+    gap = float(cfg.get("ad_gap", 3))
+    timeout = int(cfg.get("ad_timeout", 6))
+    workers = int(cfg.get("ad_workers", 16))
+    threshold = int(cfg.get("ad_threshold", 3))   # 5 次采样中 >=3 次落广告池即判定为广告入口
+
+    t0 = time.time()
+    hits_map = {}
+    fail_map = {}
+
+    def work(it):
+        h, ok = probe_ad_hits(it["url"], samples, gap, timeout)
+        return it["url"], h, ok
+
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        for url, h, ok in ex.map(work, passed):
+            hits_map[url] = h
+            fail_map[url] = (ok == 0)
+
+    kept, dropped = [], []
+    for it in passed:
+        h = hits_map.get(it["url"], 0)
+        if h >= threshold:
+            dropped.append(it)
+        else:
+            it["_ad_hits"] = h
+            kept.append(it)
+
+    # 同一频道已经有完全干净的源时，偶发跳转的源不再占用名额
+    clean_names = set(_norm_name(it["name"]) for it in kept if it["_ad_hits"] == 0)
+    final = [it for it in kept if it["_ad_hits"] == 0 or _norm_name(it["name"]) not in clean_names]
+    soft = len(kept) - len(final)
+
+    log("[广告检测] 采样%d次/间隔%.0fs：待检 %d，固定广告 %d，偶发跳转 %d，采样全失败 %d，最终保留 %d (%.0fs)"
+        % (samples, gap, len(passed), len(dropped), soft,
+           sum(1 for v in fail_map.values() if v), len(final), time.time() - t0))
+
+    if dropped or soft:
+        if not os.path.isdir(outdir):
+            os.makedirs(outdir)
+        p = os.path.join(outdir, "ad_dropped.txt")
+        with open(p, "w", encoding="utf-8", newline="\n") as f:
+            f.write("# 本次运行剔除的广告入口（仅记录，不是黑名单，下次运行重新检测）\n")
+            f.write("# 频道,URL,采样的%d次中落广告池次数\n" % samples)
+            for it in dropped:
+                f.write("%s,%s,%d\n" % (it["name"], it["url"], hits_map.get(it["url"], 0)))
+            for it in kept:
+                if it["_ad_hits"] > 0 and _norm_name(it["name"]) in clean_names:
+                    f.write("%s,%s,%d  # 同频道已有干净源，跳过\n"
+                            % (it["name"], it["url"], it["_ad_hits"]))
+                elif fail_map.get(it["url"]):
+                    f.write("%s,%s,0  # 采样时全部连不上（已通过连检，保留待下轮验证）\n"
+                            % (it["name"], it["url"]))
+        log("  剔除清单：%s" % p)
+
+    return final
+
+
 def export(passed, cfg, outdir):
     if not os.path.isdir(outdir):
         os.makedirs(outdir)
     seen, uniq = set(), []
     for x in passed:
         n = clean_name(x["name"])
+        # 去掉画质/参数后缀：CCTV-14 HD -> CCTV-14，CCTV-9 (576i) -> CCTV-9
+        n = re.sub(r'[\s\u0028\uFF08]*[\(（]?\s*(HD|SD|FHD|UHD|4K|8K|576I|720P|1080P)\s*[\)）]?\s*$',
+                   '', n, flags=re.I).strip()
         # 规范化频道名：CCTV5 / CCTV 5 → CCTV-5，统一横杠写法
         n = re.sub(r'^CCTV[\s\-]*(\d+)', lambda m: 'CCTV-%s' % m.group(1), n, flags=re.I)
         if (n, x["url"]) in seen:
@@ -172,10 +272,18 @@ def main():
     # 白名单：只保留 CCTV-1~17 和 卫视，其他全砍
     def is_allowed(name):
         n = name.upper().strip()
-        # 所有含"卫视"的频道都留
-        if "卫视" in name:
-            return True
-        # CCTV-1 到 CCTV-17（兼容 CCTV5 / CCTV 5 / CCTV-5，排除 4K/8K 衍生频道）
+        raw = name.strip()
+        # 排除 4K/8K 画质版本、CCTV-5+ 这类衍生频道、CCTV-4 Asia 这类多语种版本
+        if "4K" in n or "8K" in n:
+            return False
+        if any(b in n for b in ("ASIA", "EUROPE", "AMERICA", "PLUS")):
+            return False
+        if "+" in n:
+            return False
+        # 所有含"卫视"的频道都留，但纯"卫视"这种无名条目不要
+        if "卫视" in raw:
+            return raw != "卫视"
+        # CCTV-1 到 CCTV-17（兼容 CCTV5 / CCTV 5 / CCTV-5）
         m = re.match(r'^CCTV[\s\-]*(\d+)(?!\w)', n)
         if m and 1 <= int(m.group(1)) <= 17:
             return True
@@ -203,6 +311,7 @@ def main():
 
     log("开始检测 %d 条，共 %d 轮" % (len(dedup), rounds))
     passed = run_checks(dedup, cfg, rounds=rounds)
+    passed = filter_ads(passed, cfg, outdir)      # 广告台实时检测与剔除
     txt, m3u, rep, n, ch = export(passed, cfg, outdir)
     log("导出完成：%d 条 / %d 个频道" % (n, ch))
     log("  %s" % txt)
