@@ -1,99 +1,102 @@
 # 本次运行剔除的广告入口（仅记录，不是黑名单，下次运行重新检测）
 # 频道,URL,采样的5次中落广告池次数
-CCTV-1 (720p),http://74.91.26.218:82/live/cctv1hd.m3u8,2
-CCTV-2 (720p),http://74.91.26.218:82/live/cctv2hd.m3u8,3
-CCTV-3 (720p),http://74.91.26.218:82/live/cctv3hd.m3u8,3
+CCTV-1 (720p),http://74.91.26.218:82/live/cctv1hd.m3u8,4
+CCTV-2 (720p),http://74.91.26.218:82/live/cctv2hd.m3u8,4
+CCTV-3 (720p),http://74.91.26.218:82/live/cctv3hd.m3u8,5
 CCTV-7 (720p),http://74.91.26.218:82/live/cctv7hd.m3u8,5
 CCTV-8 (720p),http://74.91.26.218:82/live/cctv8hd.m3u8,3
-CCTV-10 (720p),http://74.91.26.218:82/live/cctv10hd.m3u8,4
-CCTV-11 (720p),http://74.91.26.218:82/live/cctv11hd.m3u8,5
-CCTV-12 (720p),http://74.91.26.218:82/live/cctv12hd.m3u8,5
-CCTV-13 (720p),http://74.91.26.218:82/live/cctv13hd.m3u8,5
-CCTV-14 HD (1080p),http://74.91.26.218:82/live/cctv14hd.m3u8,3
-CCTV-15 (720p),http://74.91.26.218:82/live/cctv15hd.m3u8,5
-CCTV-17 HD (1080p),http://74.91.26.218:82/live/cctv17hd.m3u8,5
-CCTV-1,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv1hd,3
-CCTV-2,http://204.12.221.218:8181/3m1080p/cctv2.m3u8,1
-CCTV-2,http://198.204.228.26/live/cctv2hd.m3u8,1
-CCTV-3,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv3hd,5
-CCTV-3,http://69.30.245.50/live/cctv3.m3u8,1
+CCTV-10 (720p),http://74.91.26.218:82/live/cctv10hd.m3u8,3
+CCTV-11 (720p),http://74.91.26.218:82/live/cctv11hd.m3u8,4
+CCTV-12 (720p),http://74.91.26.218:82/live/cctv12hd.m3u8,4
+CCTV-13 (720p),http://74.91.26.218:82/live/cctv13hd.m3u8,3
+CCTV-14 HD (1080p),http://74.91.26.218:82/live/cctv14hd.m3u8,4
+CCTV-15 (720p),http://74.91.26.218:82/live/cctv15hd.m3u8,2
+CCTV-17 HD (1080p),http://74.91.26.218:82/live/cctv17hd.m3u8,4
+CCTV-1,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv1hd,2
+CCTV-1,http://38.75.136.137:98/gslb/dsdqbv/cctv1hd.m3u8?auth=test20251009,1
+CCTV-3,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv3hd,4
+CCTV-3,http://107.150.60.122/live/cctv3hd.m3u8,1
 CCTV-4,http://74.91.26.218:82/live/cctv4hd.m3u8,5
-CCTV-4,http://38.75.136.137:98/gslb/dsdqpub/cctv4k.m3u8?auth=testpub,4
+CCTV-4,http://107.150.60.122/live/cctv4hd.m3u8,1
+CCTV-4,http://38.75.136.137:98/gslb/dsdqpub/cctv4k.m3u8?auth=testpub,5
 CCTV-5,http://38.75.136.137:98/gslb/dsdqpub/cctv5p.m3u8?auth=testpub,4
 CCTV-6,http://74.91.26.218:82/live/cctv6hd.m3u8,5
-CCTV-6,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv6hd,4
-CCTV-7,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv7hd,3
+CCTV-6,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv6hd,2
+CCTV-7,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv7hd,5
 CCTV-8,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv8k,4
-CCTV-9,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv9hd,5
-CCTV-9,http://74.91.26.218:82/live/cctv9hd.m3u8,3
-CCTV-9,http://192.151.150.154/live/cctv9hd.m3u8,1
-CCTV-11,http://38.75.136.137:98/gslb/dsdqpub/cctv11hd.m3u8?auth=testpub,3
+CCTV-9,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv9hd,2
+CCTV-9,http://74.91.26.218:82/live/cctv9hd.m3u8,5
+CCTV-11,http://38.75.136.137:98/gslb/dsdqpub/cctv11hd.m3u8?auth=testpub,5
 CCTV-12,http://38.75.136.137:98/gslb/dsdqpub/cctv12hd.m3u8?auth=testpub,4
 CCTV-13,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv13hd,3
-CCTV-14,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv14hd,3
+CCTV-14,http://38.75.136.137:98/gslb/dsdqbv/cctv14hd.m3u8?auth=test20251009,1
+CCTV-14,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv14hd,4
 CCTV-15,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv15hd,4
-CCTV-16,http://38.75.136.137:98/gslb/dsdqbv/cctv16hd.m3u8?auth=test20251009,1
-CCTV-16,http://38.75.136.137:98/gslb/dsdqpub/cctv16hd.m3u8?auth=testpub,3
-CCTV-17,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv17hd,3
-广东卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=gdwshd,4
-广东卫视,http://38.75.136.137:98/gslb/dsdqpub/gdwshd.m3u8?auth=testpub,3
+CCTV-16,http://38.75.136.137:98/gslb/dsdqpub/cctv16hd.m3u8?auth=testpub,4
+CCTV-17,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv17hd,4
+广东卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=gdwshd,5
+广东卫视,http://38.75.136.137:98/gslb/dsdqpub/gdwshd.m3u8?auth=testpub,4
 浙江卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=zjwshd,4
-浙江卫视,http://38.75.136.137:98/gslb/dsdqpub/zjwshd.m3u8?auth=testpub,3
-湖南卫视,http://107.150.60.122/live/hnwshd.m3u8,1
-湖南卫视,http://74.91.26.218:82/live/hnwshd.m3u8,4
-湖南卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hnwshd,5
-北京卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=bjwshd,3
-湖北卫视,http://107.150.60.122/live/hbwshd.m3u8,1
-湖北卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hbwshd,2
-黑龙江卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hljwshd,4
-黑龙江卫视,http://38.75.136.137:98/gslb/dsdqpub/hljwshd.m3u8?auth=testpub,3
+浙江卫视,http://38.75.136.137:98/gslb/dsdqpub/zjwshd.m3u8?auth=testpub,1
+湖南卫视,http://74.91.26.218:82/live/hnwshd.m3u8,5
+湖南卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hnwshd,4
+北京卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=bjwshd,4
+北京卫视,http://107.150.60.122/live/bjwshd.m3u8,1
+湖北卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hbwshd,4
+黑龙江卫视,http://38.75.136.137:98/gslb/dsdqpub/hljwshd.m3u8?auth=testpub,4
 安徽卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=ahwshd,4
-安徽卫视,http://198.204.228.26/live/ahwshd.m3u8,2
-重庆卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cqwshd,4
+重庆卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cqwshd,2
+东方卫视,http://38.75.136.137:98/gslb/dsdqbv/dfwshd.m3u8?auth=test20251009,1
 东方卫视,http://38.75.136.137:98/gslb/dsdqpub/dfwshd.m3u8?auth=testpub,5
-东方卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=dfwshd,4
+东方卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=dfwshd,5
 东南卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=dnwshd,4
-东南卫视,http://38.75.136.137:98/gslb/dsdqpub/dnwshd.m3u8?auth=testpub,5
-甘肃卫视,http://38.75.136.137:98/gslb/dsdqpub/gswshd.m3u8?auth=testpub,4
+东南卫视,http://38.75.136.137:98/gslb/dsdqpub/dnwshd.m3u8?auth=testpub,3
+甘肃卫视,http://38.75.136.137:98/gslb/dsdqpub/gswshd.m3u8?auth=testpub,3
 甘肃卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=gswshd,3
-广西卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=gxwshd,3
-广西卫视,http://38.75.136.137:98/gslb/dsdqpub/gxwshd.m3u8?auth=testpub,3
-贵州卫视,http://107.150.60.122/live/gzwshd.m3u8,1
+广西卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=gxwshd,5
+广西卫视,http://38.75.136.137:98/gslb/dsdqpub/gxwshd.m3u8?auth=testpub,4
+贵州卫视,http://204.12.221.218:8181/3m1080p/gzws.m3u8,1
 贵州卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=gzwshd,3
-贵州卫视,http://38.75.136.137:98/gslb/dsdqpub/gzwshd.m3u8?auth=testpub,3
-河北卫视,http://38.75.136.137:98/gslb/dsdqpub/hewshd.m3u8?auth=testpub,5
-河南卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hawshd,5
-河南卫视,http://38.75.136.137:98/gslb/dsdqpub/hawshd.m3u8?auth=testpub,4
+贵州卫视,http://38.75.136.137:98/gslb/dsdqpub/gzwshd.m3u8?auth=testpub,4
+河北卫视,http://38.75.136.137:98/gslb/dsdqpub/hewshd.m3u8?auth=testpub,4
+河南卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hawshd,1
+河南卫视,http://38.75.136.137:98/gslb/dsdqpub/hawshd.m3u8?auth=testpub,3
 吉林卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=jlwshd,5
-吉林卫视,http://38.75.136.137:98/gslb/dsdqpub/jlwshd.m3u8?auth=testpub,5
-江苏卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=jswshd,3
-江苏卫视,http://38.75.136.137:98/gslb/dsdqpub/jswshd.m3u8?auth=testpub,4
-江西卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=jxwshd,1
+吉林卫视,http://38.75.136.137:98/gslb/dsdqpub/jlwshd.m3u8?auth=testpub,4
+江苏卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=jswshd,4
+江苏卫视,http://107.150.60.122/live/jswshd.m3u8,1
+江苏卫视,http://38.75.136.137:98/gslb/dsdqpub/jswshd.m3u8?auth=testpub,2
+江西卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=jxwshd,3
 江西卫视,http://38.75.136.137:98/gslb/dsdqpub/jxwshd.m3u8?auth=testpub,5
-辽宁卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=lnwshd,5
+辽宁卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=lnwshd,3
+辽宁卫视,http://107.150.60.122/live/lnwshd.m3u8,1
+辽宁卫视,http://204.12.221.218:8181/3m1080p/lnws.m3u8,1
 辽宁卫视,http://38.75.136.137:98/gslb/dsdqpub/lnwshd.m3u8?auth=testpub,4
-内蒙古卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=nmgws,3
-内蒙古卫视,http://107.150.60.122/live/nmgws.m3u8,1
-青海卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=qhws,2
-山东卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=sdwshd,4
-山东卫视,http://38.75.136.137:98/gslb/dsdqpub/sdwshd.m3u8?auth=testpub,4
+内蒙古卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=nmgws,5
+青海卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=qhws,5
+山东卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=sdwshd,5
+山东卫视,http://107.150.60.122/live/sdwshd.m3u8,1
+山东卫视,http://38.75.136.137:98/gslb/dsdqpub/sdwshd.m3u8?auth=testpub,5
 山西卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=sxwshd,5
-山西卫视,http://204.12.221.218:8181/3m1080p/sxws.m3u8,1
-陕西卫视,http://107.150.60.122/live/snwshd.m3u8,1
-陕西卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=snwshd,2
+陕西卫视,http://192.151.150.154/live/snwshd.m3u8,1
+陕西卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=snwshd,4
 四川卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=scwshd,5
 四川卫视,http://38.75.136.137:98/gslb/dsdqpub/scwshd.m3u8?auth=testpub,5
-深圳卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=szwshd,5
-深圳卫视,http://38.75.136.137:98/gslb/dsdqpub/szwshd.m3u8?auth=testpub,5
-三沙卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=ssws,5
-三沙卫视,http://38.75.136.137:98/gslb/dsdqpub/ssws.m3u8?auth=testpub,4
-天津卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=tjwshd,3
+深圳卫视,http://107.150.60.122/live/szwshd.m3u8,1
+深圳卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=szwshd,3
+深圳卫视,http://38.75.136.137:98/gslb/dsdqpub/szwshd.m3u8?auth=testpub,4
+三沙卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=ssws,4
+三沙卫视,http://198.204.228.26/live/ssws.m3u8,1
+三沙卫视,http://38.75.136.137:98/gslb/dsdqpub/ssws.m3u8?auth=testpub,5
+天津卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=tjwshd,4
 天津卫视,http://38.75.136.137:98/gslb/dsdqpub/tjwshd.m3u8?auth=testpub,4
 西藏卫视,http://107.150.60.122/live/xzws.m3u8,1
-西藏卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=xzws,5
+西藏卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=xzws,3
 新疆卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=xjws,5
-新疆卫视,http://38.75.136.137:98/gslb/dsdqpub/xjws.m3u8?auth=testpub,5
-云南卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=ynwshd,3
-大湾区卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=nfws,5
-大湾区卫视,http://38.75.136.137:98/gslb/dsdqpub/nfws.m3u8?auth=testpub,5
+新疆卫视,http://38.75.136.137:98/gslb/dsdqpub/xjws.m3u8?auth=testpub,3
+云南卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=ynwshd,4
+大湾区卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=nfws,4
+大湾区卫视,http://38.75.136.137:98/gslb/dsdqpub/nfws.m3u8?auth=testpub,3
+大湾区卫视,http://107.150.60.122/live/nfws.m3u8,1
+厦门卫视,http://192.151.150.154/live/xmws.m3u8,1
 厦门卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=xmws,3
