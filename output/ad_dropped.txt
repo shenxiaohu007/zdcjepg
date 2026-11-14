@@ -1,25 +1,37 @@
 # 本次运行剔除的广告入口（仅记录，不是黑名单，下次运行重新检测）
 # 频道,URL,采样的5次中落广告池次数
-CCTV-11 (720p),http://74.91.26.218:82/live/cctv11hd.m3u8,1  # 同频道已有干净源，跳过
-CCTV-5,http://38.75.136.137:98/gslb/dsdqpub/cctv5p.m3u8?auth=testpub,2  # 同频道已有干净源，跳过
-CCTV-6,http://198.204.228.26/live/cctv6hd.m3u8,1  # 同频道已有干净源，跳过
-CCTV-7,http://69.30.245.50/live/cctv7.m3u8,1  # 同频道已有干净源，跳过
-CCTV-9,http://74.91.26.218:82/live/cctv9hd.m3u8,1  # 同频道已有干净源，跳过
+CCTV-7 (720p),http://74.91.26.218:82/live/cctv7hd.m3u8,1  # 同频道已有干净源，跳过
+CCTV-8 (720p),http://74.91.26.218:82/live/cctv8hd.m3u8,1  # 同频道已有干净源，跳过
+CCTV-10 (720p),http://74.91.26.218:82/live/cctv10hd.m3u8,1  # 同频道已有干净源，跳过
+CCTV-4,http://74.91.26.218:82/live/cctv4hd.m3u8,1  # 同频道已有干净源，跳过
+CCTV-5,http://38.75.136.137:98/gslb/dsdqpub/cctv5p.m3u8?auth=testpub,1  # 同频道已有干净源，跳过
+CCTV-6,http://74.91.26.218:82/live/cctv6hd.m3u8,1  # 同频道已有干净源，跳过
+CCTV-6,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv6hd,1  # 同频道已有干净源，跳过
+CCTV-9,http://107.150.60.122/live/cctv9hd.m3u8,1  # 同频道已有干净源，跳过
+CCTV-10,http://69.30.245.50/live/cctv10.m3u8,1  # 同频道已有干净源，跳过
 CCTV-15,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv15hd,1  # 同频道已有干净源，跳过
-广东卫视,http://38.75.136.137:98/gslb/dsdqpub/gdwshd.m3u8?auth=testpub,1  # 同频道已有干净源，跳过
-浙江卫视,http://38.75.136.137:98/gslb/dsdqpub/zjwshd.m3u8?auth=testpub,1  # 同频道已有干净源，跳过
-湖北卫视,http://107.150.60.122/live/hbwshd.m3u8,2  # 同频道已有干净源，跳过
-黑龙江卫视,http://107.150.60.122/live/hljwshd.m3u8,1  # 同频道已有干净源，跳过
-安徽卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=ahwshd,1  # 同频道已有干净源，跳过
+CCTV-15,http://198.204.228.26/live/cctv15hd.m3u8,1  # 同频道已有干净源，跳过
+CCTV-17,http://38.75.136.137:98/gslb/dsdqbv/cctv17hd.m3u8?auth=test20251009,1  # 同频道已有干净源，跳过
+湖南卫视,http://74.91.26.218:82/live/hnwshd.m3u8,1  # 同频道已有干净源，跳过
+湖南卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hnwshd,1  # 同频道已有干净源，跳过
+黑龙江卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hljwshd,1  # 同频道已有干净源，跳过
+安徽卫视,http://107.150.60.122/live/ahwshd.m3u8,1  # 同频道已有干净源，跳过
 安徽卫视,http://204.12.221.218:8181/3m1080p/ahws.m3u8,1  # 同频道已有干净源，跳过
-东南卫视,http://107.150.60.122/live/dnwshd.m3u8,1  # 同频道已有干净源，跳过
-东南卫视,http://38.75.136.137:98/gslb/dsdqpub/dnwshd.m3u8?auth=testpub,1  # 同频道已有干净源，跳过
-河北卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hewshd,1  # 同频道已有干净源，跳过
-江苏卫视,http://107.150.60.122/live/jswshd.m3u8,1  # 同频道已有干净源，跳过
-宁夏卫视,http://198.204.228.26/live/nxws.m3u8,1  # 同频道已有干净源，跳过
-青海卫视,http://107.150.60.122/live/qhws.m3u8,1  # 同频道已有干净源，跳过
-山西卫视,http://204.12.221.218:8181/3m1080p/sxws.m3u8,1  # 同频道已有干净源，跳过
-四川卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=scwshd,1  # 同频道已有干净源，跳过
+东方卫视,http://107.150.60.122/live/dfwshd.m3u8,1  # 同频道已有干净源，跳过
+广西卫视,http://198.204.228.26/live/gxwshd.m3u8,1  # 同频道已有干净源，跳过
+广西卫视,http://38.75.136.137:98/gslb/dsdqpub/gxwshd.m3u8?auth=testpub,1  # 同频道已有干净源，跳过
+河北卫视,http://38.75.136.137:98/gslb/dsdqpub/hewshd.m3u8?auth=testpub,1  # 同频道已有干净源，跳过
+江西卫视,http://38.75.136.137:98/gslb/dsdqpub/jxwshd.m3u8?auth=testpub,1  # 同频道已有干净源，跳过
+辽宁卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=lnwshd,1  # 同频道已有干净源，跳过
+陕西卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=snwshd,1  # 同频道已有干净源，跳过
+四川卫视,http://38.75.136.137:98/gslb/dsdqpub/scwshd.m3u8?auth=testpub,2  # 同频道已有干净源，跳过
+四川卫视,http://107.150.60.122/live/scwshd.m3u8,1  # 同频道已有干净源，跳过
+深圳卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=szwshd,1  # 同频道已有干净源，跳过
+三沙卫视,http://107.150.60.122/live/ssws.m3u8,1  # 同频道已有干净源，跳过
 三沙卫视,http://38.75.136.137:98/gslb/dsdqpub/ssws.m3u8?auth=testpub,1  # 同频道已有干净源，跳过
-云南卫视,http://192.151.150.154/live/ynwshd.m3u8,2  # 同频道已有干净源，跳过
-大湾区卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=nfws,1  # 同频道已有干净源，跳过
+天津卫视,http://107.150.60.122/live/tjwshd.m3u8,1  # 同频道已有干净源，跳过
+新疆卫视,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=xjws,1  # 同频道已有干净源，跳过
+新疆卫视,http://107.150.60.122/live/xjws.m3u8,1  # 同频道已有干净源，跳过
+云南卫视,http://107.150.60.122/live/ynwshd.m3u8,1  # 同频道已有干净源，跳过
+大湾区卫视,http://198.204.228.26/live/nfws.m3u8,1  # 同频道已有干净源，跳过
+厦门卫视,http://192.151.150.154/live/xmws.m3u8,1  # 同频道已有干净源，跳过
