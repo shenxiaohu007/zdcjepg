@@ -5,11 +5,11 @@
     "https://m3u.ibert.me/cn.m3u",
     "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
     "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
-    "https://raw.githubusercontent.com/YanG-1989/m3u/main/gather.m3u",
-    "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
-    "https://raw.githubusercontent.com/imDazui/Tvlist-awesome-m3u-m3u8/master/iptv.m3u"
+    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
+    "https://raw.githubusercontent.com/zbefine/iptv/main/iptv.m3u",
+    "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u"
   ],
-  "max_candidates": 1600,
+  "max_candidates": 0,
   "priority_keywords": ["CCTV", "卫视", "CGTN", "安徽", "凤凰"],
   "max_per_channel": 3,
   "prefer_plain_ip": true,
