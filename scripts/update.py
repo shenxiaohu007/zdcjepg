@@ -204,7 +204,7 @@ def export(passed, cfg, outdir):
     for x in passed:
         n = clean_name(x["name"])
         # 去掉画质/参数后缀：CCTV-14 HD -> CCTV-14，CCTV-9 (576i) -> CCTV-9
-        n = re.sub(r'[\s\u0028\uFF08]*[\(（]?\s*(HD|SD|FHD|UHD|4K|8K|576I|720P|1080P)\s*[\)）]?\s*$',
+        n = re.sub(r'[\s\u0028\uFF08]*[\(（]?\s*(HD|SD|FHD|UHD|4K|8K|576I|576P|480P|360P|720P|1080P|2160P)\s*[\)）]?\s*$',
                    '', n, flags=re.I).strip()
         # 规范化频道名：CCTV5 / CCTV 5 → CCTV-5，统一横杠写法
         n = re.sub(r'^CCTV[\s\-]*(\d+)', lambda m: 'CCTV-%s' % m.group(1), n, flags=re.I)
@@ -322,6 +322,18 @@ def main():
     before = len(items)
     items = [x for x in items if is_allowed(x["name"])]
     log("白名单过滤：%d → %d 条（只留 CCTV-1~17 + 卫视）" % (before, len(items)))
+
+    # 剔除带端口的源（http://1.2.3.4:82/xxx、http://abc.com:8080/xxx），每次运行都执行
+    if cfg.get("drop_port_url", True):
+        before_p = len(items)
+        keep = []
+        for x in items:
+            f = url_form(x["url"])
+            if not f or f.endswith(":port"):
+                continue
+            keep.append(x)
+        items = keep
+        log("去端口过滤：%d → %d 条（剔除所有带 :端口 的地址）" % (before_p, len(items)))
 
     # 去重 URL
     seen, dedup = set(), []
