@@ -13,6 +13,7 @@
   "priority_keywords": ["CCTV", "卫视", "CGTN", "安徽", "凤凰"],
   "max_per_channel": 3,
   "prefer_plain_ip": true,
+  "drop_port_url": true,
   "concurrency": 40,
   "timeout": 8,
   "fetch_timeout": 25,
