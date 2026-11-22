@@ -17,6 +17,7 @@ import tempfile
 import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
+from urllib.parse import urlsplit
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from checker import check, clean_name, category, parse_m3u_text, fetch  # noqa: E402
@@ -27,6 +28,28 @@ ORDER = ["央视", "卫视", "港澳台", "地方台", "特色"]
 
 # 广告池落点特征：这套源站 302 后会落到 /applive/{mkt|yss|102}.m3u8 时是购物广告
 AD_POOL = re.compile(r'/applive/(mkt|yss|102)\.m3u8', re.I)
+
+IPV4 = re.compile(r'^\d{1,3}(?:\.\d{1,3}){3}$')
+
+
+def url_form(url):
+    """按 URL 形态归类，供排序/过滤使用
+
+    ip          http://1.2.3.4/live/cctv2hd.m3u8      -> 最优先
+    ip:port     http://1.2.3.4:82/live/cctv2hd.m3u8   -> 次优先
+    domain      http://abc.com/x.m3u8
+    domain:port http://abc.com:8080/x.m3u8
+    """
+    try:
+        p = urlsplit(url)
+        host = (p.hostname or "").lower()
+        port = p.port          # 未写端口返回 None；显式写了 :80 也会返回 80
+    except Exception:
+        return ""
+    if not host:
+        return ""
+    is_ip = bool(IPV4.match(host)) or ":" in host      # ":" in host 兼容 IPv6
+    return ("ip" if is_ip else "domain") + (":port" if port is not None else "")
 
 
 def log(msg):
@@ -195,6 +218,14 @@ def export(passed, cfg, outdir):
         bycat.setdefault(x["cat"], {}).setdefault(x["name"], []).append(x["url"])
 
     max_per = int(cfg.get("max_per_channel", 3))
+
+    # 同频道内优先用纯 IP 无端口的源（http://1.2.3.4/x），
+    # 带端口的 / 域名的排在后面，只在 max_per 名额有多余时才出现
+    form_rank = {"ip": 0, "ip:port": 1, "domain": 2, "domain:port": 3}
+    if cfg.get("prefer_plain_ip", True):
+        for c in bycat:
+            for n in bycat[c]:
+                bycat[c][n].sort(key=lambda u: form_rank.get(url_form(u), 4))
 
     # 排序：CCTV 按数字 1→17，其他频道按名字
     def sort_key(name):
