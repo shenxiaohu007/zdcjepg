@@ -1,34 +1,19 @@
 央视,#genre#
-CCTV-1,http://198.204.228.26/live/cctv1hd.m3u8
-CCTV-1,http://38.75.136.137:98/gslb/dsdqbv/cctv1hd.m3u8?auth=test20251009
-CCTV-1,http://204.12.221.218:8181/3m1080p/cctv1.m3u8
+CCTV-1,https://liveplay-srs.voc.com.cn/hls/tv/134_180adf.m3u8
+CCTV-2,http://198.204.228.26/live/cctv2hd.m3u8
 CCTV-2,http://192.151.150.154/live/cctv2hd.m3u8
-CCTV-2,http://204.12.221.218:8181/3m1080p/cctv2.m3u8
+CCTV-2,http://107.150.60.122/live/cctv2hd.m3u8
 CCTV-3,http://107.150.60.122/live/cctv3hd.m3u8
 CCTV-4,http://107.150.60.122/live/cctv4hd.m3u8
-CCTV-4,http://173.208.212.130:8181/1080p/cctv4.m3u8
 CCTV-5,http://107.150.60.122/live/cctv5hd.m3u8
-CCTV-6,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv6hd
 CCTV-7,http://107.150.60.122/live/cctv7hd.m3u8
-CCTV-8,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv8k
 CCTV-9,http://107.150.60.122/live/cctv9hd.m3u8
 CCTV-9,http://192.151.150.154/live/cctv9hd.m3u8
 CCTV-9,https://xykt-fix.github.io/Y77.m3u8
-CCTV-10,http://38.75.136.137:98/gslb/dsdqbv/cctv10hd.m3u8?auth=test20251009
 CCTV-10,https://cdn4.skygo.mn/live/disk1/CCTV-10/HLSv3-FTA/CCTV-10.m3u8
-CCTV-11,http://38.75.136.137:98/gslb/dsdqbv/cctv11hd.m3u8?auth=test20251009
-CCTV-12,http://124.165.251.82:85/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV-12,http://107.150.60.122/live/cctv12hd.m3u8
 CCTV-13,http://120.76.248.139/live/bfgd/4200000067.m3u8
-CCTV-13,http://38.75.136.137:98/gslb/dsdqbv/cctv13hd.m3u8?auth=test20251009
 CCTV-13,http://ali-m-l.cztv.com/channels/lantian/channel21/1080p.m3u8
-CCTV-14,http://198.204.228.26/live/cctv14hd.m3u8
-CCTV-14,http://74.91.26.218:82/live/cctv14hd.m3u8
-CCTV-14,http://204.12.221.218:8181/3m1080p/cctv14.m3u8
-CCTV-15,http://198.204.228.26/live/cctv15hd.m3u8
-CCTV-15,http://204.12.221.218:8181/3m1080p/cctv15.m3u8
-CCTV-15,http://38.75.136.137:98/gslb/dsdqbv/cctv15hd.m3u8?auth=test20251009
-CCTV-16,http://38.75.136.137:98/gslb/dsdqbv/cctv16hd.m3u8?auth=test20251009
-CCTV-17,http://38.75.136.137:98/gslb/dsdqbv/cctv17hd.m3u8?auth=test20251009
 
 卫视,#genre#
 三沙卫视,http://107.150.60.122/live/ssws.m3u8
@@ -36,41 +21,33 @@ CCTV-17,http://38.75.136.137:98/gslb/dsdqbv/cctv17hd.m3u8?auth=test20251009
 东南卫视,http://107.150.60.122/live/dnwshd.m3u8
 东南卫视,http://120.76.248.139/live/bfgd/4200000483.m3u8
 东方卫视,http://107.150.60.122/live/dfwshd.m3u8
-东方卫视,http://38.75.136.137:98/gslb/dsdqbv/dfwshd.m3u8?auth=test20251009
 东方卫视,http://bp-resource-dfl.bestv.cn/155/3/video.m3u8
 云南卫视,http://192.151.150.154/live/ynwshd.m3u8
+云南卫视,http://107.150.60.122/live/ynwshd.m3u8
 云南卫视,http://120.76.248.139/live/bfgd/4200000482.m3u8
-云南卫视 (576p),http://183.207.248.71/gitv/live1/G_YUNNAN/G_YUNNAN
 人间卫视,https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w511254805.m3u8
+内蒙古卫视,http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU
 内蒙古卫视,http://play1-qk.nmtv.cn/live/1769652018126032.m3u8
-内蒙古卫视 (576p),http://183.207.248.71/gitv/live1/G_NEIMENGGU/G_NEIMENGGU
 北京卫视,http://107.150.60.122/live/bjwshd.m3u8
 北京卫视,http://120.76.248.139/live/bfgd/4200000083.m3u8
-北京卫视,http://38.75.136.137:98/gslb/dsdqbv/bjwshd.m3u8?auth=test20251009
 厦门卫视,http://192.151.150.154/live/xmws.m3u8
-厦门卫视,http://107.150.60.122/live/xmws.m3u8
 厦门卫视,http://198.204.228.26/live/xmws.m3u8
-吉林卫视,http://221.7.175.154:8445/tsfile/live/1014_1.m3u8?key=txiptv&playlive=1&authid=0
+吉林卫视,http://107.150.60.122/live/jlwshd.m3u8
 四川卫视,http://107.150.60.122/live/scwshd.m3u8
-四川卫视 (576p),http://183.207.248.71/gitv/live1/SCWS/SCWS
+四川卫视,http://183.207.248.71/gitv/live1/SCWS/SCWS
 大湾区卫视,http://198.204.228.26/live/nfws.m3u8
-大湾区卫视,http://107.150.60.122/live/nfws.m3u8
 天津卫视,http://107.150.60.122/live/tjwshd.m3u8
 天津卫视,http://183.207.248.71/cntv/live1/HD-2500k-1080P-tianjinstv/HD-2500k-1080P-tianjinstv
 天津卫视,http://223.110.243.170/PLTV/3/224/3221227212/index.m3u8
-宁夏卫视,http://107.150.60.122/live/nxws.m3u8
 宁夏卫视,http://198.204.228.26/live/nxws.m3u8
-宁夏卫视 (576p),http://183.207.248.71/gitv/live1/G_NINGXIA/G_NINGXIA
 安多卫视,https://liveout.xntv.tv/a65jur/96iln2.m3u8
 安徽卫视,http://107.150.60.122/live/ahwshd.m3u8
-安徽卫视,http://104.152.209.49:8181/720p/ahws.m3u8
-安徽卫视,http://204.12.221.218:8181/3m1080p/ahws.m3u8
+安徽卫视,http://198.204.228.26/live/ahwshd.m3u8
 山东卫视,http://107.150.60.122/live/sdwshd.m3u8
 山东卫视,http://198.204.228.26/live/sdwshd.m3u8
 山东卫视,http://120.76.248.139/live/bfgd/4200000099.m3u8
 山东教育卫视,http://livewai.sdetv.com.cn/live/da4ebbb91ee8468db5a9d230a535391f_transios/playlist.m3u8
 山西卫视,http://107.150.60.122/live/sxwshd.m3u8
-山西卫视,http://204.12.221.218:8181/3m1080p/sxws.m3u8
 山西卫视,http://m3u8.channel.wsrtv.com.cn/cms/videos/nmip-media/channellive/channel7/playlist.m3u8
 广东卫视,http://107.150.60.122/live/gdwshd.m3u8
 广东卫视,http://120.76.248.139/live/bfgd/4200000092.m3u8
@@ -80,21 +57,16 @@ CCTV-17,http://38.75.136.137:98/gslb/dsdqbv/cctv17hd.m3u8?auth=test20251009
 广西卫视,http://198.204.228.26/live/gxwshd.m3u8
 延边卫视,http://l.cztvcloud.com/channels/lantian/SXxinchang2/720p.m3u8#
 延边卫视,https://srs.iyb983.cn/video/CYS/index.m3u8
-延边卫视,https://srs.iyb983.cn:443/video/CYS/index.m3u8
 新疆卫视,http://107.150.60.122/live/xjws.m3u8
 新疆卫视,http://198.204.228.26/live/xjws.m3u8
-新疆卫视,http://218.84.12.186:8001/hls/main/playlist.m3u8?zxinjd;http://218.84.12.186:8001/hls/main/playlist.m3u8zxinjd
-新疆卫视 (576p),http://183.207.248.71/gitv/live1/G_XINJIANG/G_XINJIANG
+新疆卫视,http://183.207.248.71/gitv/live1/G_XINJIANG/G_XINJIANG
 江苏卫视,http://107.150.60.122/live/jswshd.m3u8
 江苏卫视,http://183.207.248.71/cntv/live1/HD-2500k-1080P-jiangsustv/HD-2500k-1080P-jiangsustv
-江苏卫视,http://38.75.136.137:98/gslb/dsdqbv/jswshd.m3u8?auth=test20251009
 江西卫视,http://107.150.60.122/live/jxwshd.m3u8
 江西卫视,http://183.207.248.71/cntv/live1/jiangxistv/jiangxistv
-江西卫视,http://112.27.5.218:9901/tsfile/live/faacts/0138_1.m3u8?key=txiptv&playlive=1&authid=0
-江西卫视 (576p),http://183.207.248.71/gitv/live1/JXWS/JXWS
+江西卫视,http://183.207.248.71/gitv/live1/JXWS/JXWS
 河北卫视,http://120.76.248.139/live/bfgd/4200000108.m3u8
 河北卫视,https://event.pull.hebtv.com/live/live101.m3u8
-河南卫视,http://107.150.60.122/live/hawshd.m3u8
 浙江卫视,http://107.150.60.122/live/zjwshd.m3u8
 浙江卫视,http://183.207.248.71/cntv/live1/HD-2500k-1080P-zhejiangstv/HD-2500k-1080P-zhejiangstv
 浙江卫视,http://223.110.243.173/PLTV/3/224/3221227215/index.m3u8
@@ -109,21 +81,16 @@ CCTV-17,http://38.75.136.137:98/gslb/dsdqbv/cctv17hd.m3u8?auth=test20251009
 湖南卫视,https://txmov2.a.kwimgs.com/bs3/video-hls/5199687338554291078_hlsb.m3u8
 甘肃卫视,http://120.76.248.139/live/bfgd/4200000119.m3u8
 福建海峡卫视,http://r.jdshipin.com/WtYt3
+西藏卫视,http://107.150.60.122/live/xzws.m3u8
 西藏卫视,http://120.76.248.139/live/bfgd/4200000121.m3u8
-西藏卫视,http://112.27.5.218:9901/tsfile/live/0111_1.m3u8?key=txiptv&playlive=1&authid=0
 贵州卫视,http://107.150.60.122/live/gzwshd.m3u8
-贵州卫视,http://204.12.221.218:8181/3m1080p/gzws.m3u8
-贵州卫视 (576p),http://183.207.248.71/gitv/live1/G_GUIZHOU/G_GUIZHOU
+贵州卫视,http://183.207.248.71/gitv/live1/G_GUIZHOU/G_GUIZHOU
 辽宁卫视,http://107.150.60.122/live/lnwshd.m3u8
 辽宁卫视,http://198.204.228.26/live/lnwshd.m3u8
-辽宁卫视,http://204.12.221.218:8181/3m1080p/lnws.m3u8
-辽宁卫视 (576p),http://183.207.249.71/PLTV/3/224/3221225566/index.m3u8
+辽宁卫视,http://183.207.249.71/PLTV/3/224/3221225566/index.m3u8
 重庆卫视,http://107.150.60.122/live/cqwshd.m3u8
-陕西卫视,http://192.151.150.154/live/snwshd.m3u8
 陕西卫视,http://107.150.60.122/live/snwshd.m3u8
 青海卫视,http://107.150.60.122/live/qhws.m3u8
 青海卫视,http://120.76.248.139/live/bfgd/4200000111.m3u8
 黑龙卫视,http://223.110.243.169/PLTV/3/224/3221227252/index.m3u8
-黑龙江卫视,http://107.150.60.122/live/hljwshd.m3u8
 黑龙江卫视,http://120.76.248.139/live/bfgd/4200000095.m3u8
-黑龙江卫视,https://idclive.hljtv.com:4430/live/hljws_own.m3u8
